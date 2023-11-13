@@ -1,10 +1,10 @@
 import { create } from "zustand";
 import { v4 as uuidv4 } from "uuid";
-import { INoteCard } from "../types/note";
+import { INoteCard, Note } from "../types/note";
 
 interface NoteStore {
   notes: INoteCard[];
-  addNote: (note: Omit<INoteCard, "id">) => void;
+  addNote: (note: Note) => void;
 }
 
 const useNoteStore = create<NoteStore>((set) => ({

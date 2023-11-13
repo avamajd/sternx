@@ -14,3 +14,5 @@ export interface INoteCard {
   tag: ContentType;
   description: string;
 }
+
+export type Note = Omit<INoteCard, "id">;
